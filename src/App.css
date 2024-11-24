@@ -1,0 +1,120 @@
+/* src/App.css */
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  /* background: url("./assets/game-bg.png") no-repeat center center fixed;
+  background-size: cover; */
+}
+
+h1 {
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.btn {
+  background: url("./assets/button.svg") no-repeat center center;
+  border: none;
+  cursor: pointer;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  transition: transform 0.2s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.letter-tile {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  background: url("./assets/tile.svg") no-repeat center center;
+  background-size: cover;
+  color: white;
+  font-size: 40px;
+  border-radius: 10px;
+  transition: transform 0.2s;
+}
+
+.letter-tile:hover {
+  transform: scale(1.1);
+}
+
+.drop-zone {
+  border: 2px dashed #fff;
+  padding: 20px;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  transition: background-color 0.3s;
+}
+
+.drop-zone:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+/* Add this CSS to your styles */
+
+.letter-tile {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Add this CSS to your styles */
+.score-container {
+  background: linear-gradient(
+    135deg,
+    #1a9d1e,
+    #f2e358
+  ); /* Gradient from success green to light gold */
+  border-radius: 25px; /* Rounded corners */
+  padding: 10px 20px; /* Padding for spacing */
+  display: flex; /* Flexbox for centering */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+}
+
+.score-text {
+  color: white; /* Text color */
+  font-size: 1.5rem; /* Adjust font size as needed */
+  font-weight: bold; /* Bold text */
+}
+/* Add this CSS to your styles */
+.logo-flip {
+  transform: scaleX(-1); /* Flip the logo to the right */
+  /* Optional: Add transition for smooth effect */
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+/* Add this CSS to your styles */
+.current-word-container {
+  display: flex; /* Use flexbox for alignment */
+  justify-content: center; /* Center the words horizontally */
+  flex-wrap: wrap; /* Allow words to wrap to the next line if needed */
+  margin: 20px 0; /* Add margin for spacing */
+}
+
+.word-background {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Background color with some transparency */
+  border-radius: 10px; /* Rounded corners */
+  padding: 10px 15px; /* Padding for spacing */
+  margin: 5px; /* Margin between words */
+  font-size: 1.2rem; /* Adjust font size as needed */
+  color: #333; /* Text color */
+}
