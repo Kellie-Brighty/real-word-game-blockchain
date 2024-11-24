@@ -12,7 +12,11 @@ import {
   WalletProvider,
 } from "@solana/wallet-adapter-react";
 import { WalletAdapterNetwork } from "@solana/wallet-adapter-base";
-import { UnsafeBurnerWalletAdapter } from "@solana/wallet-adapter-wallets";
+import {
+  PhantomWalletAdapter,
+  SolflareWalletAdapter,
+  UnsafeBurnerWalletAdapter,
+} from "@solana/wallet-adapter-wallets";
 import {
   WalletModalProvider,
   WalletMultiButton,
@@ -53,7 +57,11 @@ const App = () => {
   const endpoint = useMemo(() => clusterApiUrl(network), [network]);
 
   const wallets = useMemo(
-    () => [new UnsafeBurnerWalletAdapter()],
+    () => [
+      new UnsafeBurnerWalletAdapter(),
+      new PhantomWalletAdapter(),
+      new SolflareWalletAdapter(),
+    ],
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [network]
   );
